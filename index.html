@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>happy birthday hubby!!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1e3a8a;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        .page {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease;
+        }
+
+        .page.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #1e3a8a;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2c4ca5;
+        }
+
+        img {
+            max-width: 70vw;
+            max-height: 50vh;
+            margin-bottom: 20px;
+        }
+
+        .letter {
+            white-space: pre-line;
+            font-size: 1.1rem;
+            max-width: 600px;
+            text-align: left;
+            border-left: 3px solid #1e3a8a;
+            padding-left: 15px;
+            min-height: 200px;
+        }
+
+        .falling {
+            position: fixed;
+            top: -30px;
+            font-size: 24px;
+            animation: fall linear infinite;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .blue-heart {
+            color: #1e3a8a;
+        }
+
+        .yellow-star {
+            color: #facc15;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .letter {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page active" id="page1">
+        <img src="assets/images/gift1.gif" alt="Cute Icon" />
+        <h1>HAPPY BIRTHDAY <span class="highlight">HUBBY!!</span></h1>
+        <h2>૮₍ ˶> ᵕ <˶ ₎ა</span></h2>
+        <p>there's more waiting... click to find out ✨</p>
+        <button class="button" onclick="goToPage(2)">tap ‹𝟹</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2">
+        <img src="assets/images/gift2.gif" alt="Envelope" />
+        <p>aa sudah berusaha lebih baik disetiap tahunnya.<br>hebat cekayi pacal aku!</p>
+        <button class="button" onclick="goToPage(3)">open it ‹𝟹</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3">
+        <img src="assets/images/gift3.gif" alt="Heart Icon" />
+        <p>makin bertambah usia aa,<br>makin gantenk juga ini hubby nya aku.</p>
+        <button class="button" onclick="goToPage(4)">‹𝟹</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page4">
+        <img src="assets/images/gift4.gif" alt="Love Note" />
+        <p>okay ini terakhir cinta, aku buatin sesuatu buat aa tersayang.<br>tapi bacanya pelan pelan aja ya? 🎂</p>
+        <button class="button" onclick="goToPage(5)">okaay ‹𝟹</button>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page" id="page5">
+        <img src="assets/images/image1.jpeg" alt="Cute Love" />
+        <h1>my boyfriend 🤍</h1>
+        <button class="button" onclick="goToPage(6)">open this (♡˙ᵕ˙♡)</button>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="page" id="page6">
+        <img src="assets/images/image2.jpeg" alt="Cute Love" />
+        <h1>my love 🧸</h1>
+        <button class="button" onclick="goToPage(7)">♡</button>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="page" id="page7">
+        <img src="assets/images/image3.jpeg" alt="Cute Love" />
+        <h1>my home 🦒</h1>
+        <button class="button" onclick="goToPage(8)">♡</button>
+    </div>
+
+    <!-- Page 8 - Letter -->
+    <div class="page" id="page8" style="font-family: 'Montserrat', sans-serif;">
+        <h2>happy birthday my lovee-!! ૮꒰ྀི ੭˶ᵔ ᵕ ᵔ ྀི꒱੭</h2>
+        <div class="letter" id="letterText"></div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" src="assets/audio/nghyb - cas.mpeg" loop muted></audio>
+    
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        const fullLetter = `it’s your special day hubbyy! wow 23!
+wish you all the best sayang, selamat bertumbuh jauh lebih baik sayangku cintaku, panjang umur, sehat selalu ya. semoga tercapai semua impian aa, jangan pernah ngerasa sendiri okay? karena aa punya aku, aku disini selalu percaya n always forever support aa. 🥺🤍
+
+semoga jadi pribadi yang lebih baik lagi dan terus disini sama aku ya aa, semoga bisa cepet cepet ketemu biar bisa wujudin semua wishlist kita bedua!! semoga hal baik selalu beriringan dengan aa. semoga semesta selalu berpihak sama aa, semoga disetiap jalan yang aa lalui selalu dipermudah n diperlancar ya!
+teruslah tumbuh, teruslah melangkah n bahagia. aku bakal selalu bangga disetiap proses yang aa lalui, anak hebat anak kuat jagoan aku, i will always love u hubbyy!!🦒🤍🤍
+
+from: ur girlfriend (anggylucuu)`;
+
+        function goToPage(pageNum) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+            const next = document.getElementById(`page${pageNum}`);
+            next.classList.add('active');
+
+            if (pageNum === 8) {
+                const music = document.getElementById("bg-music");
+                music.muted = false;
+                music.play().catch(e => console.log("Autoplay blocked:", e));
+
+                confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+                typeText(fullLetter, document.getElementById('letterText'), 25);
+                startFallingSymbols();
+            }
+        }
+
+        function typeText(text, element, speed) {
+            element.innerHTML = '';
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    element.scrollTop = element.scrollHeight;
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        function startFallingSymbols() {
+            setInterval(() => {
+                const el = document.createElement('div');
+                el.classList.add('falling');
+                const isBlueHeart = Math.random() < 0.5;
+                el.innerText = isBlueHeart ? '🦒' : '🤍';
+                el.style.position = 'fixed';
+                el.style.top = '-30px';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.fontSize = '24px';
+                el.style.animation = `fall ${3 + Math.random() * 2}s linear forwards`;
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 6000);
+            }, 300);
+        }
+
+        // Add fall animation style
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fall {
+                to {
+                    transform: translateY(110vh);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
